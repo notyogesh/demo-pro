@@ -1,18 +1,10 @@
-import "./App.css";
-import NavBar from "./components/NavBar";
-import styled from "styled-components";
-
-const Button = styled.button`
-  color: red;
-  background-color: lightblue;
-  width: 10rem;
-`;
+import "./style.js";
+import Desktop1 from "./components/desktop1/Desktop1";
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <Button>hs</Button>
+      <Desktop1 />
     </div>
   );
 }
