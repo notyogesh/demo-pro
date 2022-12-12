@@ -12,6 +12,18 @@ export const Form = styled.form`
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
+  & div {
+    &.pwdinput {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      & img {
+        position: absolute;
+        top: 60%;
+        right: 5%;
+      }
+    }
+  }
 
   & input {
     border: 2px solid #e5e5e5;

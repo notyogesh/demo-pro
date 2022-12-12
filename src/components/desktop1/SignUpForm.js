@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form, Goo, Btn, Page, Round } from "./SignUpForm.style";
 import google from "../../images/image 4.svg";
 // import lock from "../../images/lock.svg";
+import eye from "../../images/eye.svg";
 
 const SignUpForm = () => {
+  const [passwordType, setPasswordType] = useState(true);
   return (
     <Form>
       <Page>
@@ -26,16 +28,23 @@ const SignUpForm = () => {
       </h5>
       <label for="email">Email address</label>
       <input
-        placeholder="&#9993;    yourmail@cuporger.com"
+        placeholder="&#9993;    yourmail@cuporger.com "
         id="email"
         type="email"
       />
-      <label for="password">Password</label>
-      <input
-        placeholder="&#128274;    ********"
-        id="password"
-        type="password"
-      />
+      <div className="pwdinput">
+        <label for="password">Password</label>
+        <input
+          placeholder="&#128274;    ********"
+          id="password"
+          type={passwordType ? "password" : "text"}
+        />
+        <img
+          src={eye}
+          alt="eye"
+          onClick={() => setPasswordType((prev) => !prev)}
+        />
+      </div>
       <Btn>Next</Btn>
       <p className="par">Already have an account? Login</p>
     </Form>
